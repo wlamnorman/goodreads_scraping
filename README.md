@@ -1,0 +1,4 @@
+# Goodreads scraping and reviews analysis
+
+## How-to: `scraper.py`:
+Navigate to `https://www.goodreads.com/` and click `My Books` (you probably need to have an account and be logged in). You should now be at an URL like `https://www.goodreads.com/review/list/54144458?ref=nav_mybooks`. Here The number `54144458` is your `GOODREADS_REVIEW_LIST_NUMBER`. Now simply run the script and it will output a dataframe with information about your reviews which can be analyzed.
