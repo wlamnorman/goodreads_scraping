@@ -18,7 +18,7 @@ def parse_review(review: element.Tag) -> dict:
     return {
         "title": get_review_title(review),
         "avg_rating": get_review_average_rating(review),
-        "given_rating": get_review_given_rating(review),
+        "my_rating": get_review_my_rating(review),
     }
 
 
@@ -48,7 +48,7 @@ def ratings_mapping() -> defaultdict:
     return ratings_mapping
 
 
-def get_review_given_rating(review: element.Tag) -> int:
+def get_review_my_rating(review: element.Tag) -> int:
     span_tag = review.find("span", {"class": "staticStars notranslate"})
     title_value = span_tag["title"] if "title" in span_tag.attrs else None
     return ratings_mapping()[title_value]
