@@ -47,7 +47,7 @@ def scrape_webpage_paginate(
     scraped_webpages = []
     page_number = 1
     while True:
-        url = f"https://www.goodreads.com/review/list/{review_list_number}?page={page_number}&ref=nav_mybooks"
+        url = f"https://www.goodreads.com/review/list/{review_list_number}?page={page_number}"
         page_content = scrape_webpage(url)
 
         if not has_content(page_content):
